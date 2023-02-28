@@ -48,4 +48,4 @@ ip = str(input("Zyxel IP-adress (192.168.2.254 by default):")) or "192.168.2.254
 session_key = str(input("Session:"))
 aes_key = str(input("AesKey:"))
 print()
-print_passwords(ip, aes_key, session_key)}")
+print_passwords(ip, aes_key, session_key)
