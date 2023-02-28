@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import time, logging, csv, json, requests
+import json, requests
 from Crypto.Cipher import AES
 from base64 import b64decode
 from Crypto.Util.Padding import unpad
