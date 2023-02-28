@@ -32,7 +32,6 @@ def get_supervisor_password (ip, aes_key, session_key):
     for object in data["Object"]:
         if object["Username"] == "supervisor":
             return object["Password"]
-    #print(json.dumps(data, indent=4, sort_keys=True))
 
 print("Retrieve supervisor password for Zyxel VMG8825-T50")
 print("First, login to the device (with the default admin account) using Firefox")
