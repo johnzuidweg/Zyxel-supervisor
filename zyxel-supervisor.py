@@ -4,7 +4,7 @@ from Crypto.Cipher import AES
 from base64 import b64decode
 from Crypto.Util.Padding import unpad
 
-def get_supervisor_password (ip, aes_key, session_key):
+def print_passwords (ip, aes_key, session_key):
     aes_key = aes_key
     cookies = {
         "_TESTCOOKIESUPPORT": "1",
@@ -31,8 +31,10 @@ def get_supervisor_password (ip, aes_key, session_key):
     data = json.loads(pt)
     for object in data["Object"]:
         if object["Username"] == "supervisor":
-            return object["Password"]
-
+            print(f"password for supervisor: {object['Password']}")
+        if object["Username"] == "root":           
+            print(f"password for root (cannot login to web interface): {object['Password']}")
+            
 print("Retrieve supervisor password for Zyxel VMG8825-T50")
 print("First, login to the device (with the default admin account) using Firefox")
 print()
@@ -46,4 +48,4 @@ ip = str(input("Zyxel IP-adress (192.168.2.254 by default):")) or "192.168.2.254
 session_key = str(input("Session:"))
 aes_key = str(input("AesKey:"))
 print()
-print(f"Supervisor password: {get_supervisor_password(ip, aes_key, session_key)}")
+print_passwords(ip, aes_key, session_key)}")
