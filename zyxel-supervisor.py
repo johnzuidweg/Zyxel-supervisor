@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import json, requests
 from Crypto.Cipher import AES
 from base64 import b64decode
@@ -30,11 +29,10 @@ def print_passwords (ip, aes_key, session_key):
     pt = unpad(cipher.decrypt(ct), AES.block_size)
     data = json.loads(pt)
     for object in data["Object"]:
-        if object["Username"] == "supervisor":
-            print(f"password for supervisor: {object['Password']}")
-        if object["Username"] == "root":           
-            print(f"password for root (cannot login to web interface): {object['Password']}")
-            
+        try:
+            print(f"password for {object['Username']}: {object['Password']}")
+        except KeyError:
+            pass
 print("Retrieve supervisor password for Zyxel VMG8825-T50")
 print("First, login to the device (with the default admin account) using Firefox")
 print()
