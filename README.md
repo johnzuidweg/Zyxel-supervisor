@@ -1,2 +1,2 @@
 # Zyxel-supervisor
-Retrieve supervisor password for the Zyxel VMG8825-T50. This supervisor account is far more privilliged than the admin account.
+Retrieve supervisor and root password for the Zyxel VMG8825-T50. The supervisor account is far more privilliged than the admin account.
