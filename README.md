@@ -1,5 +1,5 @@
 # Zyxel-supervisor
-Retrieve supervisor and root password for the Zyxel VMG8825-T50. The supervisor account is far more privilliged than the admin account. The root password cannot login to the web interface.
+Retrieve supervisor and root password for the Zyxel VMG8825-T50. The supervisor account is far more privilliged than the admin account. With the root account you cannot login to the web interface.
 
 First, login to the device (with the default admin account) using Firefox.
 
