@@ -7,3 +7,9 @@ Steps to follow:
 3. Run the script in fill in the IP, the Session key and the AesKey
 
 Notice: you need to run this script from the same IP as from where you logged on to the device via Firefox
+
+![image](https://user-images.githubusercontent.com/45763032/222258522-5450bbc5-e25b-455a-b8cf-94db18b4247d.png)
+
+![image](https://user-images.githubusercontent.com/45763032/222258607-b9f5173b-8d23-4b75-8a72-2c98ff7733f0.png)
+
+![image](https://user-images.githubusercontent.com/45763032/222258951-4174e7d9-669f-4e87-9fb5-c4ef9bd802e4.png)
